@@ -1,0 +1,5 @@
+﻿  Test.cpp
+D:\GDUTLearning\JavaProject\QG作业\week02\LinkQueue\LQueue\LQueue\LQueue.h(153,21): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+D:\GDUTLearning\JavaProject\QG作业\week02\LinkQueue\LQueue\LQueue\Test.cpp(142,31): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\GDUTLearning\JavaProject\QG作业\week02\LinkQueue\LQueue\LQueue\LQueue.h(284): warning C4715: “TraverseLQueue”: 不是所有的控件路径都返回值
+  LQueue.vcxproj -> D:\GDUTLearning\JavaProject\QG作业\week02\LinkQueue\LQueue\x64\Debug\LQueue.exe
