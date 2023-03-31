@@ -1,0 +1,7 @@
+com\Huangjian\util\ServletUtil.class
+com\Huangjian\servlet\CheckFile.class
+com\Huangjian\servlet\Login.class
+com\Huangjian\servlet\Forbidden.class
+com\Huangjian\servlet\Redirect.class
+com\Huangjian\servlet\Register.class
+com\Huangjian\util\JDBCUtil.class

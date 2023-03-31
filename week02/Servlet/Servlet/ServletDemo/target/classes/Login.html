@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="">
+<body>
+<meta charset="utf-8">
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    "use strict";
+    $(document).ready(function(){
+        $("#login").click(function(){
+            let username = $('[name=username]').val();
+            let password = $('[name=password]').val();
+            $.ajax({
+                type: 'post',
+                url: 'http://localhost:8080/ServletDemo/Login',
+                async: false,
+                xhrFields:{widthCredentials:true},
+                dataType:"text/html/json",
+                data: {
+                    username: username,
+                    password: password
+                },
+                success: function(result){
+                    alert(result);
+                        if(result.code == 0){
+                            alert("登陆成功");
+                            window.open("homepage.html","_self");
+                        }else{
+                            alert("登录失败");
+                        }
+                },
+                error: function(result){
+                        alert("响应失败");
+                        alert(result);
+                },
+                timeout: 3000
+            });
+        });
+    });
+</script>
+<table>
+    <tr>
+        <td >
+            用户名：
+        </td>
+        <td>
+            <label>
+                <input type="text" size="23" name="username">
+            </label>
+        </td>
+
+        <td>
+            密码：
+        </td>
+        <td>
+            <label>
+                <input type="password" size="23" name="password">
+            </label>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button type="button" id="login">登陆</button>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button type="button" id="visit">以游客身份进入</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            尚无账号？
+        </td>
+        <td>
+            <button type="button" id="toRegister" onclick="window.open('register.html','_self')">前往注册</button>
+        </td>
+    </tr>
+</table>
+<form method="post" action="http://39.98.41.126:31104/files/uploadImg" enctype="multipart/form-data">
+    文件：<input type="file" name="file1"><br/>
+    <label>
+        <input type="text" name="type">
+    </label>
+    <label>
+        <input type="text" name="id">
+    </label>
+    <input type="submit" value="get提交">
+</form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        登录
+    </tr>
+</table>
+<form action="http://localhost:8080/ServletDemo/Login" method="get" >
+    <label>
+        用户名<input type="text" name ="username" >
+        密码<input type="password" name ="password">
+    </label>
+    <input type="submit" >
+</form>
+<table>
+    <tr>
+        注册
+    </tr>
+</table>
+<form action="http://localhost:8080/ServletDemo/Register" method="post">
+    <label>
+        用户名<input type="text" name ="username">
+        密码<input type="password" name ="password">
+    </label>
+    <input type="submit" >
+</form>
+<form method="get" action="http://localhost:8080/ServletDemo/Redirect" >
+    <input type="submit" value="bilibili">
+</form>
+<table>
+<tr>
+    <td>
+        <button type="button" id="File" onclick="javascript:window.open('file.html','_self')">打开文件</button>
+    </td>
+</tr>
+</table>
+<form method="get" action="http://localhost:8080/ServletDemo/Forbidden" >
+    <input type="submit" value="403">
+</form>
+</body>
+</html>
