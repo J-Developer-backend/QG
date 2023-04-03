@@ -1,7 +1,0 @@
-﻿  test.cpp
-  正在生成代码
-  Previous IPDB not found, fall back to full compilation.
-D:\GDUTLearning\JavaProject\QG作业\week03\Sort\Sort\Sort\Sort.h(376): warning C4715: “FindSmallNumber”: 不是所有的控件路径都返回值
-  All 32 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  已完成代码的生成
-  Sort.vcxproj -> D:\GDUTLearning\JavaProject\QG作业\week03\Sort\Sort\x64\Release\Sort.exe
