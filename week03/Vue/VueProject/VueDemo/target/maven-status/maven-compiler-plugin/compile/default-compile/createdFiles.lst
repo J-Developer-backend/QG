@@ -1,0 +1,4 @@
+com\Huangjian\Util\MybatisUtil.class
+com\Huangjian\Servlet\RegisterServlet.class
+com\Huangjian\Servlet\LoginServlet.class
+com\Huangjian\Util\JsonStr.class

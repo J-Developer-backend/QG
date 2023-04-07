@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <script src="../js/vue2.js"></script>
+    <script src="../js/axios.js"></script>
+</head>
+<body>
+<div id="login">
+    <label for="username">用户名：</label>
+    <input type="text" name="username" id="username" v-model="username"><br>
+    <label for="password">密码：</label>
+    <input type="password" name="password" id="password" v-model="password"><br>
+    <input type="button" value="登录" @click="login()">
+</div>
+<div id="register">
+    <label for="username">用户名：</label>
+    <input type="text" name="username" id="newUsername" v-model="username"><br>
+    <label for="password">密码：</label>
+    <input type="password" name="password" id="newPassword" v-model="password"><br>
+    <input type="button" value="注册" @click="register()">
+</div>
+</body>
+<script>
+    var loginVue = new Vue({
+        el:"#login",
+        data(){
+            return{
+                username:"",
+                password:"",
+            }
+        },
+        methods:{
+            login(){
+                let json = {"username":this.username,"password":this.password};
+                axios({
+                    method:"post",
+                    url:"http://localhost:8080/VueDemo/login",
+                    data:json,
+                    dataType:JSON,
+                }).then(function (resp) {
+                    console.log(resp.data);
+                    alert(resp.data.data);
+                    alert(resp.data.status);
+                    alert(resp.data.msg);
+                })}
+        }
+    });
+    var registerVue = new Vue({
+        el:"#register",
+        data(){
+            return{
+                username:"",
+                password:"",
+            }
+        },
+        methods:{
+            register (){
+                let json = {"username":this.username,"password":this.password};
+                axios({
+                    method:"post",
+                    url:"http://localhost:8080/VueDemo/register",
+                    data:json,
+                    dataType:JSON,
+                }).then(function (resp) {
+                    console.log(resp.data);
+                    alert(resp.data.data);
+                    alert(resp.data.status);
+                    alert(resp.data.msg);
+                })}
+        }
+    });
+</script>
+</html>
