@@ -1,0 +1,3 @@
+﻿  test.cpp
+D:\GDUTLearning\JavaProject\QG作业\week04\tree\tree\tree\tree.h(330): warning C4715: “BST_search”: 不是所有的控件路径都返回值
+  tree.vcxproj -> D:\GDUTLearning\JavaProject\QG作业\week04\tree\tree\x64\Debug\tree.exe
