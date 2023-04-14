@@ -1,0 +1,4 @@
+com\Huangjian\controller\BaseServlet.class
+com\Huangjian\util\InsertUtil.class
+com\Huangjian\Service\impl\RegisterImpl.class
+com\Huangjian\Service\RegisterService.class

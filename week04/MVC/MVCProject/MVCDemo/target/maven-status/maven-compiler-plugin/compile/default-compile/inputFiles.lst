@@ -1,0 +1,14 @@
+D:\GDUTLearning\JavaProject\QG作业\week04\MVC\MVCProject\MVCDemo\src\main\java\com\Huangjian\controller\BaseServlet.java
+D:\GDUTLearning\JavaProject\QG作业\week04\MVC\MVCProject\MVCDemo\src\main\java\com\Huangjian\controller\LoginServlet.java
+D:\GDUTLearning\JavaProject\QG作业\week04\MVC\MVCProject\MVCDemo\src\main\java\com\Huangjian\Annotation\ColumnAnnotation.java
+D:\GDUTLearning\JavaProject\QG作业\week04\MVC\MVCProject\MVCDemo\src\main\java\com\Huangjian\po\User.java
+D:\GDUTLearning\JavaProject\QG作业\week04\MVC\MVCProject\MVCDemo\src\main\java\com\Huangjian\Service\RegisterService.java
+D:\GDUTLearning\JavaProject\QG作业\week04\MVC\MVCProject\MVCDemo\src\main\java\com\Huangjian\dao\impl\UserDaoImpl.java
+D:\GDUTLearning\JavaProject\QG作业\week04\MVC\MVCProject\MVCDemo\src\main\java\com\Huangjian\Service\LoginService.java
+D:\GDUTLearning\JavaProject\QG作业\week04\MVC\MVCProject\MVCDemo\src\main\java\com\Huangjian\util\JDBCUtil.java
+D:\GDUTLearning\JavaProject\QG作业\week04\MVC\MVCProject\MVCDemo\src\main\java\com\Huangjian\Service\impl\RegisterImpl.java
+D:\GDUTLearning\JavaProject\QG作业\week04\MVC\MVCProject\MVCDemo\src\main\java\com\Huangjian\util\InsertUtil.java
+D:\GDUTLearning\JavaProject\QG作业\week04\MVC\MVCProject\MVCDemo\src\main\java\com\Huangjian\util\QueryUtil.java
+D:\GDUTLearning\JavaProject\QG作业\week04\MVC\MVCProject\MVCDemo\src\main\java\com\Huangjian\util\ResultUtil.java
+D:\GDUTLearning\JavaProject\QG作业\week04\MVC\MVCProject\MVCDemo\src\main\java\com\Huangjian\dao\UserDao.java
+D:\GDUTLearning\JavaProject\QG作业\week04\MVC\MVCProject\MVCDemo\src\main\java\com\Huangjian\Service\impl\LoginServiceImpl.java

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <script src="../js/vue2.js"></script>
+    <script src="../js/axios.js"></script>
+</head>
+<body>
+<div id="login">
+    <label for="username">用户名：</label>
+    <input type="text" name="username" id="username" v-model="username"><br>
+    <label for="password">密码：</label>
+    <input type="password" name="password" id="password" v-model="password"><br>
+    <input type="button" value="登录" @click="login()">
+    <input type="button" value="忘记密码" @click="forget()">
+</div>
+<div id="register">
+    <label for="username">用户名：</label>
+    <input type="text" name="username" id="newUsername" v-model="username"><br>
+    <label for="password">密码：</label>
+    <input type="password" name="password" id="newPassword" v-model="password"><br>
+    <input type="button" value="注册" @click="register()">
+</div>
+</body>
+<script>
+    var loginVue = new Vue({
+        el:"#login",
+        data(){
+            return{
+                username:"",
+                password:"",
+                count:0,
+            }
+        },
+        methods:{
+            login(){
+                let param = {"username":this.username,"password":this.password,"method":"loginServlet"};
+                console.log(param);
+                if(this.count<3){
+                    axios({
+                        method: "POST",
+                        url: "http://localhost:8080/MVCDemo/base",
+                        data: param,
+                        dataType: JSON,
+                    }).then(function (resp) {
+                        console.log(resp.data);
+                        if (resp.data.code == 1) {
+                            alert(resp.data.data.username);
+                        } else {
+                            this.count++;
+                        }
+                        alert(resp.data.msg);
+                    })
+                }else{
+                    alert("密码错误多次，禁止登录");
+                }
+            },
+            forget(){
+                let param = {"username":this.username,"password":this.password,"method":"forgetServlet"};
+                console.log(param);
+                axios({
+                    method:"POST",
+                    url:"http://localhost:8080/MVCDemo/base",
+                    data:param,
+                    dataType: JSON,
+                }).then(function (resp) {
+                    console.log(resp.data);
+                    if(resp.data.code == 1){
+                        alert(resp.data.data.username);
+                    }
+                    alert(resp.data.msg);
+                })}
+
+        }
+    });
+    var registerVue = new Vue({
+        el:"#register",
+        data(){
+            return{
+                username:"",
+                password:"",
+            }
+        },
+        methods:{
+            register (){
+                let param = {"username":this.username,"password":this.password,"method":"registerServlet"};
+                axios({
+                    method:"POST",
+                    url:"http://localhost:8080/MVCDemo/base",
+                    data:param,
+                    dataType:JSON,
+                }).then(resp=> {
+                    console.log(resp.data);
+                    if(resp.data.code == 1){
+                        alert(resp.data.data.username);
+                    }
+                    alert(resp.data.msg);
+                })}
+        }
+    });
+</script>
+</html>
